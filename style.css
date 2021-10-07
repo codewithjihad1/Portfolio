@@ -33,13 +33,13 @@ section{
 /* Navigation menu css */
 
 nav{
-  position: fixed;
   width: 100%;
-  padding: 20px 0;
+  padding: 13px 0;
   background: #fff;
   z-index: 1;
 }
 nav.sticky{
+  position: fixed;
   padding: 13px 0px;
   background: #4070f4;
 }
