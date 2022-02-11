@@ -8,6 +8,11 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
+.main-wrap {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
 img {
     width: 100%;
     height: 100%;
@@ -40,7 +45,7 @@ img {
 .header-wrap {
     float: left;
     width: 100%;
-    background: #f2f2f2;
+    background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     position: relative;
 }
@@ -212,7 +217,56 @@ nav .logo a {
     grid-gap: 40px;
 }
 .about-img {
-    
+    max-height: 450px;
+    height: 100%;
+    border-radius: 15px;
 }
-
-
+.about-img img {
+    border-radius: 15px;
+    border: 3px solid var(--primaryColor);
+}
+.about-text h2 {
+    font-size: 2em;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+.about-text p {
+    font-size: 1em;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.about-btn .button span {
+    position: relative;
+    z-index: 1;
+}
+.about-text .about-btn .button {
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: var(--primaryColor);
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.about-btn .button::before {
+    content: "";
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #41bffb;
+    transition: width .5s, height .5s;
+}
+.about-btn button:hover::before {
+    width: 100px;
+    height: 100px;
+}
