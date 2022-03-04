@@ -20,3 +20,6 @@ aboutBtn.onmousemove = ripple;
 
 let heroBtn = document.querySelector('.hero-btn button');
 heroBtn.onmousemove = ripple;
+
+let contactBtn = document.querySelector('.contact-btn button');
+contactBtn.onmousemove = ripple;
