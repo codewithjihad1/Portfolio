@@ -26,6 +26,7 @@ img {
 }
 :root {
     --primaryColor: #4070f4;
+    --btnHoverColor: #163487;
 }
 
 /* Custom ScrollBar */
@@ -185,7 +186,7 @@ nav .logo a {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: #163487;
+    background: var(--btnHoverColor);
     transition: width .5s, height .5s;
 }
 .hero-btn button:hover::before {
@@ -285,7 +286,7 @@ nav .logo a {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: #41bffb;
+    background: var(--btnHoverColor);
     transition: width .5s, height .5s;
 }
 .about-btn button:hover::before {
