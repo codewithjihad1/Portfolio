@@ -1,7 +1,7 @@
 /* Import Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -299,7 +299,7 @@ nav .logo a {
 .skills-wrap {
     float: left;
     width: 100%;
-    background: #F0F8FF;
+    background: #6e93f72b;
 }
 .skills-inner {
     padding: 50px 0;
@@ -387,4 +387,163 @@ nav .logo a {
     font-size: 3.5em;
     font-weight: 600;
     color: var(--primaryColor);
+}
+
+/* =========Services Section css Start========== */
+.services-wrap {
+    float: left;
+    width: 100%;
+}
+.services-inner {
+    padding: 50px 0;
+}
+.services-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.services-title h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--primaryColor);
+    display: inline-block;
+    position: relative;
+}
+.services-title h2::before, .services-title h2::after {
+    content: "";
+    position: absolute;
+    width : 100%;
+    height: 3px;
+    background: var(--primaryColor);
+}
+.services-title h2::before {
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.services-title h2::after {
+    width: 10px;
+    height: 10px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+.services-item-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+.services-item {
+    text-align: center;
+    padding: 30px 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background: #ffffff;
+    transition: .4s ease-in-out;
+}
+.service-icon {
+    margin: 0 0 10px;
+}
+.service-icon i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    border-radius: 50%;
+    background: var(--primaryColor);
+    color: #fff;
+    transition: .4s ease-in-out;
+}
+.services-item:hover {
+    background: var(--primaryColor);
+    color: #fff;
+}
+.services-item:hover .service-icon i {
+    color: var(--primaryColor);
+    background: #ffffff;
+}
+
+
+/* =========Contact Section css Start========== */
+.contact-wrap {
+    float: left;
+    width: 100%;
+    background: #6e93f72b;
+}
+.contact-wrap .common-wrap {
+    max-width: 520px;
+}
+.contact-inner {
+    padding: 50px 0;
+}
+.contact-title {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.contact-title h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--primaryColor);
+    display: inline-block;
+    position: relative;
+}
+.contact-title h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url('../img/underline.svg') repeat-x;
+    width: 100%;
+    height: 5px;
+}
+.contact-content {
+    text-align: center;
+}
+.contact-content h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #444444;
+}
+.contact-content p{
+    margin-bottom: 15px;
+    color: #333333;
+}
+.contact-btn {
+
+}
+.contact-btn button {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    background: var(--primaryColor);
+    position: relative;
+    overflow: hidden;
+}
+.contact-btn button::before {
+    content: "";
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #0a018beb;
+    transition: width .5s, height .5s;
+}
+.contact-btn button:hover::before {
+    width: 100px;
+    height: 100px;
+}
+.contact-btn button span {
+    position: relative;
+    z-index: 99;
+}
+
+/* =========Footer Section css Start========== */
+.footer-wrap {
+    float: left;
+    width: 100%;
 }
