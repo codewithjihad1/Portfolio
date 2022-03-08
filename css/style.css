@@ -24,11 +24,16 @@ img {
     padding: 0 20px;
     clear: both;
 }
+.mobi {
+    display: none;
+}
+.desk {
+    display: block;
+}
 :root {
     --primaryColor: #4070f4;
     --btnHoverColor: #163487;
 }
-
 /* Custom ScrollBar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -77,6 +82,22 @@ nav .logo a {
     font-size: 18px;
     color: #0e2431;
     font-weight: 600;
+    position: relative;
+}
+.menu-items ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background: linear-gradient(45deg, transparent, var(--primaryColor));
+    width: 0;
+    height: 4px;
+    border-radius: 2px;
+    transition: all .3s ease-in-out;
+}
+.menu-items ul li.active a::before,
+.menu-items ul li a:hover::before {
+    width: 100%;
 }
 .header-social ul {
     display: flex;
@@ -118,12 +139,7 @@ nav .logo a {
 .header-social ul li a:hover i {
     transform: scale(1.5);
 }
-.menu-items .cancel-btn {
-    display: none;
-}
-.header-inner .menu-button {
-    display: none;
-}
+
 
 /* ==========Hero Section css Start========== */
 .hero-wrap {
@@ -546,4 +562,22 @@ nav .logo a {
 .footer-wrap {
     float: left;
     width: 100%;
+}
+.footer-inner {
+    padding: 15px 0;
+}
+.footer-text {
+    text-align: center;
+}
+.footer-text span {
+    color: #333333;
+    font-size: 16px;
+}
+.footer-text span a {
+    text-decoration: none;
+    color: #333333;
+    transition: all 0.3s ease;
+}
+.footer-text span a:hover {
+    text-decoration: underline;
 }
