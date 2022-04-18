@@ -23,3 +23,12 @@ heroBtn.onmousemove = ripple;
 
 let contactBtn = document.querySelector('.contact-btn button');
 contactBtn.onmousemove = ripple;
+
+
+// Typing animation Effects by typed js
+var typed = new Typed('.auto-type', {
+    strings: ["Md Jihad Hossain ", "Front-end Developer "],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
+});
